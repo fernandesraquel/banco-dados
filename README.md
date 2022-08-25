@@ -1,2 +1,2 @@
-# Banco de Dados I
-Repositório para a Disciplina Banco de Dados I.
+# Banco de Dados
+Repositório para a Disciplina Banco de Dados.
