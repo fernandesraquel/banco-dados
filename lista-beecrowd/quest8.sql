@@ -1,3 +1,8 @@
+/*
+A locadora pretende fazer uma promoção para os clientes que ainda não fizeram nenhuma locação.
+Seu trabalho é nos entregar o ID e o nome dos clientes que não realizaram nenhuma locação. Ordene a saída por ID.
+*/
+
 CREATE TABLE customers (
   id numeric PRIMARY KEY,
   name varchar(50),
@@ -31,3 +36,14 @@ VALUES
   (5,	'02/03/2016',	6),
   (6,	'04/04/2016',	4);
   
+/*
+SELECT 
+ id, name 
+FROM 
+  customers c
+WHERE NOT EXISTS (
+  SELECT 1 
+  FROM locations l
+  WHERE l.id_customers = c.id
+)
+ORDER BY id;

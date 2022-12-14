@@ -1,3 +1,8 @@
+/*
+Como de costume o setor de vendas está fazendo uma análise de quantos produtos temos em estoque, e você poderá ajudar eles.
+Então seu trabalho será exibir o nome e a quantidade de produtos de cada uma categoria.
+*/
+
 CREATE TABLE categories (
   id numeric PRIMARY KEY,
   name varchar
@@ -27,3 +32,9 @@ VALUES
   (4,	'Computer desk',	350,	320.50,	2),
   (5,	'Chair',	3000,	210.64,	4),
   (6,	'Single bed',	750,	460,	1);
+
+/*
+SELECT categories.name, SUM(products.amount) AS sun 
+FROM products 
+INNER JOIN categories ON products.id_categories = categories.id 
+GROUP BY categories.name;

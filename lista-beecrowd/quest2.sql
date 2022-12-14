@@ -1,3 +1,10 @@
+/*
+O setor financeiro precisa de um relatório sobre os fornecedores dos produtos que vendemos. 
+Os relatórios contemplam todas as categorias, mas por algum motivo, os fornecedores dos produtos 
+cuja categoria é a executiva, não estão no relatório.
+Seu trabalho é retornar os nomes dos produtos e dos fornecedores cujo código da categoria é 6.
+*/
+
 CREATE TABLE categories (
   id numeric PRIMARY KEY,
   name varchar
@@ -52,3 +59,8 @@ VALUES
   (5,	'Chair',	3000,	210.64,	3,	6),
   (6,	'Single bed',	750,	460,	1,	2);
   
+/*
+SELECT products.name, providers.name 
+FROM products
+INNER JOIN providers ON products.id_providers = providers.id
+  AND products.id_categories = 6;
